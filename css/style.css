@@ -1,9 +1,31 @@
+/* 
+
+color:
+
+#316879
+#f47a60
+#7fe7dc
+#ced7d8
+
+*/
+
+
+
 body {
+    background-image: url('../img/paper-background.jpg');
+    background-size: cover;
+}
+
+.main-div {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+h1 {
+    font-size: 56px;
 }
 
 table {
@@ -91,7 +113,7 @@ tr td:last-child {
 }
 
 .active-player {
-    background-color: rgba(73, 209, 250, 0.3);
+    background-color: rgba(73, 209, 250, 0.5);
     transition: all 225ms ease-in-out;
 }
 
@@ -129,5 +151,28 @@ tr td:last-child {
 }
 
 .button:hover {
-    background-color: rgba(73, 209, 250, 0.3);
+    background-color: rgba(73, 209, 250, 0.5);
+}
+
+.logo {
+    width: 300px;
+}
+
+.player-input-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.player-input-field p {
+    margin-right: 20px;
+    font-size: 26px;
+}
+
+.player-input-field input {
+    width: 200px;
+    height: 35px;
+    font-size: 20px;
 }

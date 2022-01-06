@@ -1,5 +1,8 @@
 let fieldContent = [];
 
+let playerOne = 'Spieler 1';
+let playerTwo = 'Spieler 2';
+
 let gameOver = false;
 let currentPlayer = 'cross';
 
@@ -7,7 +10,7 @@ function fillField(id) {
 
     if (!fieldContent[id] && !gameOver) {
 
-        if ( currentPlayer == 'cross') {
+        if (currentPlayer == 'cross') {
             currentPlayer = 'circle';
             document.getElementById('player-1').classList.remove('active-player');
             document.getElementById('player-2').classList.add('active-player');
@@ -16,7 +19,7 @@ function fillField(id) {
             document.getElementById('player-1').classList.add('active-player');
             document.getElementById('player-2').classList.remove('active-player');
         }
-    
+
         fieldContent[id] = currentPlayer;
         playerMove();
         checkIfWin();
@@ -44,7 +47,7 @@ function checkIfWin() {
 
     if (fieldContent[0] == fieldContent[1] && fieldContent[1] == fieldContent[2] && fieldContent[0]) {
         winner = fieldContent[0];
-        setTimeout(function() {
+        setTimeout(function () {
             document.getElementById('0').classList.add('win-background');
             document.getElementById('1').classList.add('win-background');
             document.getElementById('2').classList.add('win-background');
@@ -102,7 +105,7 @@ function checkIfWin() {
 
     if (winner) {
         gameOver = true;
-        setTimeout(function() {
+        setTimeout(function () {
             document.getElementById('winner-font').innerHTML = 'Du hast Gewonnen';
             document.getElementById('winner-font').classList.add('winner-font');
         }, 500);
@@ -125,4 +128,25 @@ function restartGame() {
         document.getElementById(`cross-${i}`).classList.add('dp-none');
         document.getElementById(`circle-${i}`).classList.add('dp-none');
     }
+}
+
+
+
+function mainMenu() {
+    restartGame();
+    playerOne = 'Spieler 1';
+    playerTwo = 'Spieler 2';
+    document.getElementById('name-from-player-one').value = '';
+    document.getElementById('name-from-player-two').value = '';
+    document.getElementById('playground').classList.add('dp-none');
+    document.getElementById('main-menu').classList.remove('dp-none');
+}
+
+
+
+function startGame() {
+    playerOne = document.getElementById('name-from-player-one').value;
+    playerTwo = document.getElementById('name-from-player-two').value;
+    document.getElementById('main-menu').classList.add('dp-none');
+    document.getElementById('playground').classList.remove('dp-none');
 }
