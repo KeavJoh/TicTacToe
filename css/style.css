@@ -112,3 +112,22 @@ tr td:last-child {
 .winner-font {
     animation: winAnimate 500ms ease-in-out;
 }
+
+.button-div {
+    margin-top: 50px;
+}
+
+.button {
+    width: 200px;
+    font-size: 1.5em;
+    padding: 10px 20px 10px 20px;
+    margin: 10px;
+    background-color: white;
+    border: 3px solid black;
+    cursor: pointer;
+    transition: unset;
+}
+
+.button:hover {
+    background-color: rgba(73, 209, 250, 0.3);
+}

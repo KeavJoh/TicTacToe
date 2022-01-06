@@ -9,18 +9,17 @@ function fillField(id) {
 
         if ( currentPlayer == 'cross') {
             currentPlayer = 'circle';
-            document.getElementById('player-1').classList.remove('active-player')
-            document.getElementById('player-2').classList.add('active-player')
+            document.getElementById('player-1').classList.remove('active-player');
+            document.getElementById('player-2').classList.add('active-player');
         } else {
             currentPlayer = 'cross';
-            document.getElementById('player-1').classList.add('active-player')
-            document.getElementById('player-2').classList.remove('active-player')
+            document.getElementById('player-1').classList.add('active-player');
+            document.getElementById('player-2').classList.remove('active-player');
         }
     
         fieldContent[id] = currentPlayer;
         playerMove();
         checkIfWin();
-
     }
 }
 
@@ -102,11 +101,28 @@ function checkIfWin() {
     }
 
     if (winner) {
-        console.log('Gewonnen ' + winner);
         gameOver = true;
         setTimeout(function() {
             document.getElementById('winner-font').innerHTML = 'Du hast Gewonnen';
             document.getElementById('winner-font').classList.add('winner-font');
         }, 500);
+    }
+}
+
+
+
+function restartGame() {
+    gameOver = false;
+    fieldContent = [];
+    document.getElementById('winner-font').innerHTML = 'Viel Glück';
+    document.getElementById('winner-font').classList.remove('winner-font');
+
+    for (let i = 0; i < 9; i++) {
+        document.getElementById(`${i}`).classList.remove('win-background');
+    }
+
+    for (let i = 0; i < 9; i++) {
+        document.getElementById(`cross-${i}`).classList.add('dp-none');
+        document.getElementById(`circle-${i}`).classList.add('dp-none');
     }
 }
