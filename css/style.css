@@ -1,3 +1,11 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 table {
     border-collapse: collapse;
 }
@@ -53,4 +61,36 @@ tr td:last-child {
 
 .dp-none {
     display: none;
+}
+
+.player-label {
+    display: flex;
+    align-items: center;
+    margin: 50px;
+}
+
+.player-label p {
+    margin-left: 20px;
+    font-size: 1.5em;
+}
+
+.player-label img {
+    width: 50px;
+    height: auto;
+}
+
+.player-label-img-div {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 0px 10px 0px 10px;
+    border: 2px solid grey;
+    border-radius: 15px;
+    background-color: white;
+    transition: all 225ms ease-in-out;
+}
+
+.active-player {
+    background-color: lightcyan;
+    transition: all 225ms ease-in-out;
 }
