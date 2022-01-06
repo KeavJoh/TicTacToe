@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
     <title>TicTacToe</title>
 </head>
 
@@ -19,62 +19,62 @@
 
     <table>
         <tr>
-            <td>
+            <td onclick="fillField(0)">
                 <div class="shape-div">
-                    <div class="player-shape-div"><img class="player-shape-img dp-none" src="img/circle.png" alt=""></div>
-                    <div class="player-shape-div"><img class="player-shape-img dp-none" src="img/cross.png" alt=""></div>
+                    <div class="player-shape-div"><img id="cross-0" class="player-shape-img dp-none" src="img/cross.png" alt=""></div>
+                    <div class="player-shape-div"><img id="circle-0" class="player-shape-img dp-none" src="img/circle.png" alt=""></div>
                 </div>
             </td>
-            <td>
+            <td onclick="fillField(1)"> 
                 <div class="shape-div">
-                    <div class="player-shape-div"><img class="player-shape-img dp-none" src="img/circle.png" alt=""></div>
-                    <div class="player-shape-div"><img class="player-shape-img dp-none" src="img/cross.png" alt=""></div>
+                    <div class="player-shape-div"><img id="circle-1" class="player-shape-img dp-none" src="img/circle.png" alt=""></div>
+                    <div class="player-shape-div"><img id="cross-1" class="player-shape-img dp-none" src="img/cross.png" alt=""></div>
                 </div>
             </td>
-            <td>
+            <td onclick="fillField(2)">
                 <div class="shape-div">
-                    <div class="player-shape-div"><img class="player-shape-img dp-none" src="img/circle.png" alt=""></div>
-                    <div class="player-shape-div"><img class="player-shape-img dp-none" src="img/cross.png" alt=""></div>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div class="shape-div">
-                    <div class="player-shape-div"><img class="player-shape-img dp-none" src="img/circle.png" alt=""></div>
-                    <div class="player-shape-div"><img class="player-shape-img dp-none" src="img/cross.png" alt=""></div>
-                </div>
-            </td>
-            <td>
-                <div class="shape-div">
-                    <div class="player-shape-div"><img class="player-shape-img dp-none" src="img/circle.png" alt=""></div>
-                    <div class="player-shape-div"><img class="player-shape-img dp-none" src="img/cross.png" alt=""></div>
-                </div>
-            </td>
-            <td>
-                <div class="shape-div">
-                    <div class="player-shape-div"><img class="player-shape-img dp-none" src="img/circle.png" alt=""></div>
-                    <div class="player-shape-div"><img class="player-shape-img dp-none" src="img/cross.png" alt=""></div>
+                    <div class="player-shape-div"><img id="circle-2" class="player-shape-img dp-none" src="img/circle.png" alt=""></div>
+                    <div class="player-shape-div"><img id="cross-2" class="player-shape-img dp-none" src="img/cross.png" alt=""></div>
                 </div>
             </td>
         </tr>
         <tr>
-            <td>
+            <td onclick="fillField(3)">
                 <div class="shape-div">
-                    <div class="player-shape-div"><img class="player-shape-img dp-none" src="img/circle.png" alt=""></div>
-                    <div class="player-shape-div"><img class="player-shape-img dp-none" src="img/cross.png" alt=""></div>
+                    <div class="player-shape-div"><img id="circle-3" class="player-shape-img dp-none" src="img/circle.png" alt=""></div>
+                    <div class="player-shape-div"><img id="cross-3" class="player-shape-img dp-none" src="img/cross.png" alt=""></div>
                 </div>
             </td>
-            <td>
+            <td onclick="fillField(4)">
                 <div class="shape-div">
-                    <div class="player-shape-div"><img class="player-shape-img dp-none" src="img/circle.png" alt=""></div>
-                    <div class="player-shape-div"><img class="player-shape-img dp-none" src="img/cross.png" alt=""></div>
+                    <div class="player-shape-div"><img id="circle-4" class="player-shape-img dp-none" src="img/circle.png" alt=""></div>
+                    <div class="player-shape-div"><img id="cross-4" class="player-shape-img dp-none" src="img/cross.png" alt=""></div>
                 </div>
             </td>
-            <td>
+            <td onclick="fillField(5)">
                 <div class="shape-div">
-                    <div class="player-shape-div"><img class="player-shape-img dp-none" src="img/circle.png" alt=""></div>
-                    <div class="player-shape-div"><img class="player-shape-img dp-none" src="img/cross.png" alt=""></div>
+                    <div class="player-shape-div"><img id="circle-5" class="player-shape-img dp-none" src="img/circle.png" alt=""></div>
+                    <div class="player-shape-div"><img id="cross-5" class="player-shape-img dp-none" src="img/cross.png" alt=""></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td onclick="fillField(6)">
+                <div class="shape-div">
+                    <div class="player-shape-div"><img id="circle-6" class="player-shape-img dp-none" src="img/circle.png" alt=""></div>
+                    <div class="player-shape-div"><img id="cross-6" class="player-shape-img dp-none" src="img/cross.png" alt=""></div>
+                </div>
+            </td>
+            <td onclick="fillField(7)">
+                <div class="shape-div">
+                    <div class="player-shape-div"><img id="circle-7" class="player-shape-img dp-none" src="img/circle.png" alt=""></div>
+                    <div class="player-shape-div"><img id="cross-7" class="player-shape-img dp-none" src="img/cross.png" alt=""></div>
+                </div>
+            </td>
+            <td onclick="fillField(8)">
+                <div class="shape-div">
+                    <div class="player-shape-div"><img id="circle-8" class="player-shape-img dp-none" src="img/circle.png" alt=""></div>
+                    <div class="player-shape-div"><img id="cross-8" class="player-shape-img dp-none" src="img/cross.png" alt=""></div>
                 </div>
             </td>
         </tr>
