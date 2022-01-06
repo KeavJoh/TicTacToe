@@ -23,7 +23,7 @@ td {
 }
 
 td:hover {
-    background-color: rgba(25, 113, 25, 0.2);
+    background-color: rgba(73, 209, 250, 0.3);
 }
 
 tr:first-child td {
@@ -91,6 +91,11 @@ tr td:last-child {
 }
 
 .active-player {
-    background-color: lightcyan;
+    background-color: rgba(73, 209, 250, 0.3);
     transition: all 225ms ease-in-out;
+}
+
+.win-background {
+    background-color: rgba(25, 113, 25, 0.5);
+    transition: all 500ms ease-in;
 }
