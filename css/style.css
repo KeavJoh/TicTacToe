@@ -97,5 +97,18 @@ tr td:last-child {
 
 .win-background {
     background-color: rgba(25, 113, 25, 0.5);
-    transition: all 500ms ease-in;
+    animation: winAnimate 500ms ease-in-out;
+}
+
+@keyframes winAnimate {
+    from{
+        transform: scaleX(0);
+    }
+    to{
+        transform: scaleX(1);
+    }
+}
+
+.winner-font {
+    animation: winAnimate 500ms ease-in-out;
 }

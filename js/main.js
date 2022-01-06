@@ -1,10 +1,11 @@
 let fieldContent = [];
 
+let gameOver = false;
 let currentPlayer = 'cross';
 
 function fillField(id) {
 
-    if (!fieldContent[id]) {
+    if (!fieldContent[id] && !gameOver) {
 
         if ( currentPlayer == 'cross') {
             currentPlayer = 'circle';
@@ -44,9 +45,11 @@ function checkIfWin() {
 
     if (fieldContent[0] == fieldContent[1] && fieldContent[1] == fieldContent[2] && fieldContent[0]) {
         winner = fieldContent[0];
-        document.getElementById('0').classList.add('win-background');
-        document.getElementById('1').classList.add('win-background');
-        document.getElementById('2').classList.add('win-background');
+        setTimeout(function() {
+            document.getElementById('0').classList.add('win-background');
+            document.getElementById('1').classList.add('win-background');
+            document.getElementById('2').classList.add('win-background');
+        }, 500);
     }
 
     if (fieldContent[3] == fieldContent[4] && fieldContent[4] == fieldContent[5] && fieldContent[3]) {
@@ -100,5 +103,10 @@ function checkIfWin() {
 
     if (winner) {
         console.log('Gewonnen ' + winner);
+        gameOver = true;
+        setTimeout(function() {
+            document.getElementById('winner-font').innerHTML = 'Du hast Gewonnen';
+            document.getElementById('winner-font').classList.add('winner-font');
+        }, 500);
     }
 }
