@@ -39,10 +39,10 @@
         </div>
         <div class="player-label">
             <div class="player-label-img-div active-player" id="player-1"><img src="img/circle.png" alt="">
-                <p>Spieler 1</p>
+                <p id="player-one">Spieler 1</p>
             </div>
             <div class="player-label-img-div" id="player-2"><img src="img/cross.png" alt="">
-                <p>Spieler 2</p>
+                <p id="player-two">Spieler 2</p>
             </div>
         </div>
         <table>
@@ -125,8 +125,15 @@
                 </td>
             </tr>
         </table>
-        <div class="button-div"><button class="button" onclick="mainMenu()">Hauptmenü</button><button id="restart"
-                class="button" onclick="restartGame()">Neustart</button></div>
+        <div class="counter-div">
+            <p id="counterPlayerOne">Spieler 1: 0 Punkte</p>
+            <p>|</p> 
+            <p id="counterPlayerTwo">Spieler 2: 0 Punkte</p>
+        </div>
+        <div class="button-div">
+            <button class="button" onclick="mainMenu()">Hauptmenü</button>
+            <button id="restart" class="button" onclick="restartGame()">Revanche</button>
+        </div>
     </div>
 
 </body>

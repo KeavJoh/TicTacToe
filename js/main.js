@@ -1,28 +1,32 @@
 let fieldContent = [];
 
-let playerOne = 'Spieler 1';
-let playerTwo = 'Spieler 2';
+let playerOne;
+let playerTwo;
+let counterPlayerOne = 0;
+let counterPlayerTwo = 0;
 
 let gameOver = false;
 let currentPlayer = 'cross';
 
 function fillField(id) {
 
+
     if (!fieldContent[id] && !gameOver) {
 
         if (currentPlayer == 'cross') {
             currentPlayer = 'circle';
-            document.getElementById('player-1').classList.remove('active-player');
-            document.getElementById('player-2').classList.add('active-player');
+            document.getElementById('player-1').classList.remove('active-player-one');
+            document.getElementById('player-2').classList.add('active-player-two');
         } else {
             currentPlayer = 'cross';
-            document.getElementById('player-1').classList.add('active-player');
-            document.getElementById('player-2').classList.remove('active-player');
+            document.getElementById('player-1').classList.add('active-player-one');
+            document.getElementById('player-2').classList.remove('active-player-two');
         }
 
         fieldContent[id] = currentPlayer;
         playerMove();
         checkIfWin();
+        checkIfTie()
     }
 }
 
@@ -106,9 +110,37 @@ function checkIfWin() {
     if (winner) {
         gameOver = true;
         setTimeout(function () {
-            document.getElementById('winner-font').innerHTML = 'Du hast Gewonnen';
-            document.getElementById('winner-font').classList.add('winner-font');
+            if (winner == 'circle') {
+                document.getElementById('winner-font').innerHTML = `${playerOne} hat Gewonnen`;
+                document.getElementById('winner-font').classList.add('winner-font');
+                counterPlayerOne++;
+                document.getElementById('counterPlayerOne').innerHTML = `${playerOne}: ${counterPlayerOne} Punkte`;
+            }
+            if (winner == 'cross') {
+                document.getElementById('winner-font').innerHTML = `${playerTwo} hat Gewonnen`;
+                document.getElementById('winner-font').classList.add('winner-font');
+                counterPlayerTwo++;
+                document.getElementById('counterPlayerTwo').innerHTML = `${playerTwo}: ${counterPlayerTwo} Punkte`;
+            }
         }, 500);
+    }
+}
+
+
+
+function checkIfTie() {
+    if (typeof fieldContent[0] == 'string' && typeof fieldContent[1] == 'string' && typeof fieldContent[2] == 'string' && typeof fieldContent[3] == 'string' && typeof fieldContent[4] == 'string' && typeof fieldContent[5] == 'string' && typeof fieldContent[6] == 'string' && typeof fieldContent[7] == 'string' && typeof fieldContent[8] == 'string' && gameOver == false) {
+        document.getElementById('winner-font').innerHTML = `Unentschieden`;
+        document.getElementById('winner-font').classList.add('winner-font');
+
+        for (let i = 0; i < fieldContent.length; i++) {
+            if (fieldContent[i] == 'cross') {
+                document.getElementById(`${i}`).classList.add('active-player-one');
+            }
+            if (fieldContent[i] == 'circle') {
+                document.getElementById(`${i}`).classList.add('active-player-two');
+            }
+        }
     }
 }
 
@@ -122,6 +154,8 @@ function restartGame() {
 
     for (let i = 0; i < 9; i++) {
         document.getElementById(`${i}`).classList.remove('win-background');
+        document.getElementById(`${i}`).classList.remove('active-player-one');
+        document.getElementById(`${i}`).classList.remove('active-player-two');
     }
 
     for (let i = 0; i < 9; i++) {
@@ -136,6 +170,8 @@ function mainMenu() {
     restartGame();
     playerOne = 'Spieler 1';
     playerTwo = 'Spieler 2';
+    counterPlayerOne = 0;
+    counterPlayerTwo = 0;
     document.getElementById('name-from-player-one').value = '';
     document.getElementById('name-from-player-two').value = '';
     document.getElementById('playground').classList.add('dp-none');
@@ -145,8 +181,25 @@ function mainMenu() {
 
 
 function startGame() {
-    playerOne = document.getElementById('name-from-player-one').value;
-    playerTwo = document.getElementById('name-from-player-two').value;
+
+    if (document.getElementById('name-from-player-one').value == '') {
+        playerOne = 'Spieler 1'
+    } else {
+        playerOne = document.getElementById('name-from-player-one').value;
+    }
+
+    if (document.getElementById('name-from-player-two').value == '') {
+        playerTwo = 'Spieler 2'
+    } else {
+        playerTwo = document.getElementById('name-from-player-two').value;
+    }
+
+    document.getElementById('player-one').innerHTML = `${playerOne}`;
+    document.getElementById('player-two').innerHTML = `${playerTwo}`;
+
+    document.getElementById('counterPlayerOne').innerHTML = `${playerOne}: ${counterPlayerOne} Punkte`;
+    document.getElementById('counterPlayerTwo').innerHTML = `${playerTwo}: ${counterPlayerTwo} Punkte`;
+
     document.getElementById('main-menu').classList.add('dp-none');
     document.getElementById('playground').classList.remove('dp-none');
 }
