@@ -1,0 +1,51 @@
+/* 
+
+color:
+
+rgba(49, 104, 121, 0.5);
+rgba(244, 122, 96, 0.5);
+rgba(127, 231, 220, 0.5);
+rgba(206, 215, 216, 0.5);
+
+*/
+
+body {
+    background-image: url('../img/paper-background.jpg');
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+.main-div {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 56px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+.dp-none {
+    display: none;
+}
+
+.button {
+    width: 200px;
+    font-size: 1.5em;
+    padding: 10px 20px 10px 20px;
+    margin: 10px;
+    background-color: white;
+    border: 3px solid black;
+    cursor: pointer;
+    transition: unset;
+}
+
+.button:hover {
+    background-color: rgba(73, 209, 250, 0.5);
+}

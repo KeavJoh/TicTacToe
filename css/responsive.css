@@ -1,0 +1,117 @@
+@media (max-width: 1440px) {
+    .logo {
+        width: 250px;
+    }
+
+    h1 {
+        font-size: 46px;
+    }
+
+    h2 {
+        margin-bottom: unset;
+        margin-top: 50px;
+        font-size: 32px;
+    }
+    
+    .player-label {
+        margin: 20px;
+    }
+
+    .player-label img {
+        width: 35px;
+        height: auto;
+    }
+
+    .player-label-img-div p {
+        margin-left: 20px;
+        font-size: 1.3em;
+    }
+
+    .player-label-img-div {
+        width: 150px;
+    }
+
+}
+
+@media (max-width: 1280px) {
+    .logo {
+        width: 230px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .player-input-field p {
+        font-size: 23px;
+    }
+
+    .player-input-field input {
+        width: 180px;
+        height: 33px;
+        font-size: 18px;
+    }
+
+    .button {
+        width: 200px;
+        font-size: 1.3em;
+        padding: 8px 18px 8px 18px;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 996px) {
+    .logo {
+        width: 200px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .player-input-field p {
+        font-size: 22px;
+    }
+
+    .player-input-field input {
+        width: 150px;
+    }
+}
+
+@media (max-width: 720px) {
+    .main-div {
+        height: 98vh;
+    }
+
+    .logo {
+        width: 180px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .player-input-field p {
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 360px) {
+    .main-div {
+        height: 97vh;
+    }
+
+    .button {
+        width: 200px;
+        font-size: 1.3em;
+        padding: 8px 18px 8px 18px;
+        margin: 40px 10px 10px 10px;
+    }
+}
+
+@media (max-width: 996px) and (orientation: landscape) {
+    .logo {
+        display: none;
+    }
+}

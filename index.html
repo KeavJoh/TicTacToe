@@ -8,9 +8,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/playground.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- JS -->
     <script src="js/main.js"></script>
+    <script src="js/mainFunction.js"></script>
+    <script src="js/supportFunction.js"></script>
+
+    <!-- TITLE AND ICON -->
     <title>TicTacToe</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.ico" />
 </head>
 
 
@@ -18,8 +30,8 @@
 <body>
 
 
-
-    <div class="main-div" id="main-menu">
+    <!-- MENU | INVISIBLE WHEN PLAYER START GAME -->
+    <div class="main-div dp-none" id="main-menu">
         <img class="logo" src="img/logo.png" alt="">
         <h1>TicTacToe</h1>
         <div class="player-input-field">
@@ -32,19 +44,22 @@
     </div>
 
 
-
-    <div class="main-div dp-none" id="playground">
+    <!-- FULL PLAYGROUND | VISIBLE WHEN PLAYER START GAME -->
+    <div class="main-div" id="playground">
+        <!-- GAME INFORMATION -->
         <div id="winner-div" class="winner-wiv">
             <h2 id="winner-font">Viel Glück</h2>
         </div>
+        <!-- DISPLAY PLAYER NAME AND FIGURE -->
         <div class="player-label">
-            <div class="player-label-img-div active-player" id="player-1"><img src="img/circle.png" alt="">
+            <div class="player-label-img-div active-player-one" id="player-1"><img src="img/circle.png" alt="">
                 <p id="player-one">Spieler 1</p>
             </div>
             <div class="player-label-img-div" id="player-2"><img src="img/cross.png" alt="">
                 <p id="player-two">Spieler 2</p>
             </div>
         </div>
+        <!-- PLAYGROUND -->
         <table>
             <tr>
                 <td id="0" onclick="fillField(0)">
@@ -125,12 +140,14 @@
                 </td>
             </tr>
         </table>
+        <!-- COUNTER IF PLAYER WIN A MATCH -->
         <div class="counter-div">
             <p id="counterPlayerOne">Spieler 1: 0 Punkte</p>
-            <p>|</p> 
+            <p>|</p>
             <p id="counterPlayerTwo">Spieler 2: 0 Punkte</p>
         </div>
-        <div class="button-div">
+        <!-- ACTION BUTTON -->
+        <div class="button-playground-div">
             <button class="button" onclick="mainMenu()">Hauptmenü</button>
             <button id="restart" class="button" onclick="restartGame()">Revanche</button>
         </div>

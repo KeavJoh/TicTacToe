@@ -1,0 +1,22 @@
+.logo {
+    width: 300px;
+}
+
+.player-input-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.player-input-field p {
+    margin-right: 20px;
+    font-size: 26px;
+}
+
+.player-input-field input {
+    width: 200px;
+    height: 35px;
+    font-size: 20px;
+}
