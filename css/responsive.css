@@ -12,7 +12,7 @@
         margin-top: 50px;
         font-size: 32px;
     }
-    
+
     .player-label {
         margin: 20px;
     }
@@ -29,6 +29,15 @@
 
     .player-label-img-div {
         width: 150px;
+    }
+
+    .counter-div p {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .button-playground-div {
+        margin-top: 30px;
     }
 
 }
@@ -58,6 +67,30 @@
         padding: 8px 18px 8px 18px;
         margin: 10px;
     }
+
+    .button-playground-div {
+        margin-top: unset;
+    }
+
+    .counter-div {
+        margin: 5px;
+        margin-top: 15px !important;
+    }
+
+    .player-label {
+        margin: 5px;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        margin-top: unset;
+        font-size: 28px;
+    }
+
+    .player-label-img-div p {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
 }
 
 @media (max-width: 996px) {
@@ -76,6 +109,37 @@
     .player-input-field input {
         width: 150px;
     }
+
+    td {
+        width: 100px;
+        height: 100px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .player-label img {
+        width: 30px;
+    }
+
+    .player-label-img-div p {
+        font-size: 1.1em;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .counter-div p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 1.2em;
+    }
+
+    .player-shape-img {
+        width: 60px;
+        height: 60px;
+    }
+
 }
 
 @media (max-width: 720px) {
@@ -97,7 +161,7 @@
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 490px) {
     .main-div {
         height: 97vh;
     }
@@ -108,10 +172,55 @@
         padding: 8px 18px 8px 18px;
         margin: 40px 10px 10px 10px;
     }
+
+    td {
+        width: 90px;
+        height: 90px;
+    }
+
+    .counter-div {
+        display: none;
+    }
+
+    .button-playground-div {
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button {
+        width: 200px;
+        margin: 5px 10px 10px 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .player-label-img-div {
+        width: 114px;
+    }
+
+    .player-label img {
+        width: 22px;
+    }
+
+    .player-label-img-div p {
+        font-size: 1.1em;
+        margin-top: 7px;
+        margin-bottom: 7px;
+        margin-left: 15px;
+    }
 }
 
-@media (max-width: 996px) and (orientation: landscape) {
-    .logo {
+@media (max-width: 799px) and (orientation: landscape) {
+    .no-landscape-info {
+        display: block;
+    }
+
+    .main-div {
         display: none;
     }
 }
