@@ -1,3 +1,20 @@
+function playerMove() {
+    for (let i = 0; i < fieldContent.length; i++) {
+        if (fieldContent[i] == 'cross') {
+            // show cross
+            document.getElementById(`cross-${i}`).classList.remove('dp-none');
+        }
+
+        if (fieldContent[i] == 'circle') {
+            // show cirlce
+            document.getElementById(`circle-${i}`).classList.remove('dp-none');
+        }
+    }
+    counterPlayerMove++;
+}
+
+
+
 function setActivePlayerTwo() {
     document.getElementById('player-1').classList.remove('active-player-one');
     document.getElementById('player-2').classList.add('active-player-two');
