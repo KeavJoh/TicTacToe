@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/responsive.css">
 
     <!-- JS -->
-    <script src="js/main.js"></script>
+    <script src="js/memory.js"></script>
     <script src="js/mainFunction.js"></script>
     <script src="js/supportFunction.js"></script>
 
@@ -29,14 +29,13 @@
 
 <body>
 
-
     <div class="no-landscape-info">
         <p>TicTacToe ist nicht für den Landscapemodus optimiert! Für das volle Spielerlebnis wechseln Sie bitte auf den
             Portraitmodus!</p>
     </div>
 
     <!-- MENU | INVISIBLE WHEN PLAYER START GAME -->
-    <div class="main-div dp-none" id="main-menu">
+    <div class="main-div" id="main-menu">
         <img class="logo" src="img/logo.png" alt="">
         <h1>TicTacToe</h1>
         <div class="player-input-field">
@@ -50,7 +49,7 @@
 
 
     <!-- FULL PLAYGROUND | VISIBLE WHEN PLAYER START GAME -->
-    <div class="main-div" id="playground">
+    <div class="main-div dp-none" id="playground">
         <!-- GAME INFORMATION -->
         <div id="winner-div" class="winner-wiv">
             <h2 id="winner-font">Viel Glück</h2>
@@ -67,7 +66,7 @@
         <!-- PLAYGROUND -->
         <table>
             <tr>
-                <td id="0" onclick="fillField(0)">
+                <td id="0" onclick="playerSelectField(0)">
                     <div class="shape-div">
                         <div class="player-shape-div"><img id="cross-0" class="player-shape-img dp-none"
                                 src="img/cross.png" alt=""></div>
@@ -75,7 +74,7 @@
                                 src="img/circle.png" alt=""></div>
                     </div>
                 </td>
-                <td id="1" onclick="fillField(1)">
+                <td id="1" onclick="playerSelectField(1)">
                     <div class="shape-div">
                         <div class="player-shape-div"><img id="circle-1" class="player-shape-img dp-none"
                                 src="img/circle.png" alt=""></div>
@@ -83,7 +82,7 @@
                                 src="img/cross.png" alt=""></div>
                     </div>
                 </td>
-                <td id="2" onclick="fillField(2)">
+                <td id="2" onclick="playerSelectField(2)">
                     <div class="shape-div">
                         <div class="player-shape-div"><img id="circle-2" class="player-shape-img dp-none"
                                 src="img/circle.png" alt=""></div>
@@ -93,7 +92,7 @@
                 </td>
             </tr>
             <tr>
-                <td id="3" onclick="fillField(3)">
+                <td id="3" onclick="playerSelectField(3)">
                     <div class="shape-div">
                         <div class="player-shape-div"><img id="circle-3" class="player-shape-img dp-none"
                                 src="img/circle.png" alt=""></div>
@@ -101,7 +100,7 @@
                                 src="img/cross.png" alt=""></div>
                     </div>
                 </td>
-                <td id="4" onclick="fillField(4)">
+                <td id="4" onclick="playerSelectField(4)">
                     <div class="shape-div">
                         <div class="player-shape-div"><img id="circle-4" class="player-shape-img dp-none"
                                 src="img/circle.png" alt=""></div>
@@ -109,7 +108,7 @@
                                 src="img/cross.png" alt=""></div>
                     </div>
                 </td>
-                <td id="5" onclick="fillField(5)">
+                <td id="5" onclick="playerSelectField(5)">
                     <div class="shape-div">
                         <div class="player-shape-div"><img id="circle-5" class="player-shape-img dp-none"
                                 src="img/circle.png" alt=""></div>
@@ -119,7 +118,7 @@
                 </td>
             </tr>
             <tr>
-                <td id="6" onclick="fillField(6)">
+                <td id="6" onclick="playerSelectField(6)">
                     <div class="shape-div">
                         <div class="player-shape-div"><img id="circle-6" class="player-shape-img dp-none"
                                 src="img/circle.png" alt=""></div>
@@ -127,7 +126,7 @@
                                 src="img/cross.png" alt=""></div>
                     </div>
                 </td>
-                <td id="7" onclick="fillField(7)">
+                <td id="7" onclick="playerSelectField(7)">
                     <div class="shape-div">
                         <div class="player-shape-div"><img id="circle-7" class="player-shape-img dp-none"
                                 src="img/circle.png" alt=""></div>
@@ -135,7 +134,7 @@
                                 src="img/cross.png" alt=""></div>
                     </div>
                 </td>
-                <td id="8" onclick="fillField(8)">
+                <td id="8" onclick="playerSelectField(8)">
                     <div class="shape-div">
                         <div class="player-shape-div"><img id="circle-8" class="player-shape-img dp-none"
                                 src="img/circle.png" alt=""></div>
